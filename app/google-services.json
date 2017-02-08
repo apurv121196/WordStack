@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "1012647427742",
+    "firebase_url": "https://wordstack-70f3d.firebaseio.com",
+    "project_id": "wordstack-70f3d",
+    "storage_bucket": "wordstack-70f3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012647427742:android:b3590d9b6e1fcf7b",
+        "android_client_info": {
+          "package_name": "com.google.engedu.wordstack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012647427742-6rbgdgt38spbuuh55b8tkpeicib4ip57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLqLo8P03zR8yoxKMYsd_8ZlsHHUtg7aU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012647427742-6rbgdgt38spbuuh55b8tkpeicib4ip57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012647427742:android:2781ad4977b07394",
+        "android_client_info": {
+          "package_name": "com.apurv.android.wordstack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012647427742-6rbgdgt38spbuuh55b8tkpeicib4ip57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLqLo8P03zR8yoxKMYsd_8ZlsHHUtg7aU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012647427742-6rbgdgt38spbuuh55b8tkpeicib4ip57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

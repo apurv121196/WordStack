@@ -68,11 +68,7 @@ public class LetterTile extends TextView {
 
     @Override
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        /**
-         **
-         **  YOUR CODE GOES HERE
-         **
-         **/
+        
         return super.onTouchEvent(motionEvent);
     }
 }
