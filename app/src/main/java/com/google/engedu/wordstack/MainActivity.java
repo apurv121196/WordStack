@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        verticalLayout.setOnDragListener(new DragListener());
+
         mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -79,11 +82,11 @@ public class MainActivity extends AppCompatActivity {
         verticalLayout.addView(stackedLayout, 3);
 
         word1LinearLayout = (LinearLayout) findViewById(R.id.word1);
-        word1LinearLayout.setOnTouchListener(new TouchListener());
-        //word1LinearLayout.setOnDragListener(new DragListener());
+//        word1LinearLayout.setOnTouchListener(new TouchListener());
+        word1LinearLayout.setOnDragListener(new DragListener());
         word2LinearLayout = (LinearLayout) findViewById(R.id.word2);
-        word2LinearLayout.setOnTouchListener(new TouchListener());
-        //word2LinearLayout.setOnDragListener(new DragListener());
+//        word2LinearLayout.setOnTouchListener(new TouchListener());
+        word2LinearLayout.setOnDragListener(new DragListener());
     }
 
     private class TouchListener implements View.OnTouchListener {
@@ -109,10 +112,11 @@ public class MainActivity extends AppCompatActivity {
 
         public boolean onDrag(View v, DragEvent event) {
             int action = event.getAction();
-            switch (event.getAction()) {
+            switch (action) {
                 case DragEvent.ACTION_DRAG_STARTED:
                     v.setBackgroundColor(LIGHT_BLUE);
                     v.invalidate();
+                    Log.e("tag","drag started!");
                     return true;
                 case DragEvent.ACTION_DRAG_ENTERED:
                     v.setBackgroundColor(LIGHT_GREEN);
@@ -134,11 +138,7 @@ public class MainActivity extends AppCompatActivity {
                         TextView messageBox = (TextView) findViewById(R.id.message_box);
                         messageBox.setText(word1 + " " + word2);
                     }
-                    /**
-                     **
-                     **  YOUR CODE GOES HERE
-                     **
-                     **/
+                    placedTiles.push(tile);
                     return true;
             }
             return false;
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
         word2LinearLayout.removeAllViews();
         stackedLayout.clear();
         TextView messageBox = (TextView) findViewById(R.id.message_box);
-        messageBox.setText("Game started");
+        messageBox.setText("Game started! Drag the letters to place them");
         word1 = words.get(random.nextInt(words.size()));
         word2 = words.get(random.nextInt(words.size()));
         Log.e("tag",word1 + "   "+word2);

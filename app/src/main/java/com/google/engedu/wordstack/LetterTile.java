@@ -18,6 +18,7 @@ package com.google.engedu.wordstack;
 import android.content.ClipData;
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,7 +69,13 @@ public class LetterTile extends TextView {
 
     @Override
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        
+        if(!this.frozen && motionEvent.getAction()==MotionEvent.ACTION_DOWN)
+        {
+//            Log.e("mytag","called!");
+            return startDrag(ClipData.newPlainText("",""),new View.DragShadowBuilder(this)
+                    , this,0);
+
+        }
         return super.onTouchEvent(motionEvent);
     }
 }
